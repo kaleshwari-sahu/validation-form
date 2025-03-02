@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Secure Form Validation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container fade-in" id="home">
+        <h2>👋 Welcome</h2>
+        <button onclick="showSignup()">🔐 Signup</button>
+        <button onclick="showLogin()">🔑 Login</button>
+    </div>
+
+    <div class="container fade-in" id="signup" style="display: none;">
+        <h2>📝 Signup</h2>
+        <input type="email" id="signupEmail" placeholder="📧 Email">
+        <div class="password-container">
+            <input type="password" id="signupPassword" placeholder="🔒 Password">
+            <span onclick="togglePassword('signupPassword', 'toggleSignup')" id="toggleSignup">👀</span>
+        </div>
+        <span class="error" id="passwordError"></span>
+        <input type="text" id="signupContact" placeholder="📞 Contact Number">
+        <button onclick="signup()">✅ Register</button>
+        <button onclick="showHome()">🔙 Back</button>
+    </div>
+
+    <div class="container fade-in" id="login" style="display: none;">
+        <h2>🔑 Login</h2>
+        <input type="email" id="loginEmail" placeholder="📧 Email">
+        <div class="password-container">
+            <input type="password" id="loginPassword" placeholder="🔒 Password">
+            <span onclick="togglePassword('loginPassword', 'toggleLogin')" id="toggleLogin">👀</span>
+        </div>
+        <button onclick="login()">🚀 Login</button>
+        <button onclick="showHome()">🔙 Back</button>
+    </div>
+
+    <div class="container fade-in" id="dashboard" style="display: none;">
+        <h2>🎉 Welcome, <span id="userEmail"></span>!</h2>
+        <button onclick="logout()">🚪 Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
