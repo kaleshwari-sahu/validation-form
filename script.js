@@ -94,7 +94,7 @@ function login() {
 
     if (user) {
         alert('🚀 Login successful!');
-        showDashboard(email);
+        showDashboard("user");
     } else {
         alert('❌ Invalid credentials! Please check your email & password.');
     }
